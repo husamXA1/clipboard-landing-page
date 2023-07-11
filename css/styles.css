@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: hsl(201, 11%, 66%);
+    text-align: center;
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero section */
+.hero {
+    background: url('../images/bg-header-mobile.png') top right/cover no-repeat;
+    padding: 100px 0;
+}
+
+section,
+footer {
+    padding: 50px 0;
+}
+
+.main-title,
+.section-title,
+.sub-title {
+    color: hsl(210, 10%, 33%);
+}
+
+.main-title {
+    margin: 30px 0;
+    font-size: 2rem;
+}
+
+.section-title {
+    font-size: 1.75rem;
+    margin: 20px 0;
+}
+
+.sub-title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.text {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.access .text {
+    margin-bottom: 50px;
+}
+
+.buttons-grid {
+    max-width: 450px;
+    margin: 2em auto 0;
+}
+
+.btn {
+    width: 100%;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 5em;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-bottom: 3px solid black;
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.btn:hover,
+.btn:focus {
+    opacity: 0.75;
+}
+
+.btn--cyan {
+    background-color: hsl(171, 66%, 44%);
+    border-color: hsl(171, 33%, 40%);
+    box-shadow: 0 10px 20px hsla(171, 66%, 44%, 50%);
+}
+
+.btn--blue {
+    background-color: hsl(233, 100%, 69%);
+    border-color: hsl(233, 50%, 55%);
+    box-shadow: 0 10px 20px hsla(233, 100%, 69%, 50%);
+}
+
+.cards-grid {
+    padding: 50px 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    gap: 3em;
+}
+
+.card > * {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: hsl(201, 11%, 95%);
+}
+
+footer .logo {
+    width: 50px;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul li {
+    margin: 20px 0;
+}
+
+a {
+    text-decoration: none;
+    color: hsl(210, 10%, 33%);
+    font-size: 1.1rem;
+}
+
+a:hover,
+a:focus {
+    color: hsl(171, 66%, 44%);
+}
+
+.social-list {
+    display: flex;
+    justify-content: center;
+}
+
+.social-list li {
+    margin: 20px;
+}
+
+.social-list a {
+    font-size: 2rem;
+}
+/* Desktop media */
+@media (min-width: 900px) {
+    .hero {
+        background-image: url('../images/bg-header-desktop.png');
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .sub-title {
+        font-size: 1.75rem;
+    }
+
+    .text {
+        font-size: 1.125rem;
+        max-width: 700px;
+    }
+
+    .buttons-grid {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    .features {
+        position: relative;
+    }
+
+    .features .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .features img {
+        position: absolute;
+        width: 50%;
+        top: 50%;
+        left: 0;
+        transform: translate(-5%, -50%);
+    }
+
+    .features .cards-grid {
+        text-align: left;
+        grid-column: 2;
+        padding: 5em 3em;
+    }
+
+    .cards-grid:not(.features .cards-grid) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer ul {
+        display: flex;
+    }
+
+    footer ul li {
+        margin: 10px 30px;
+    }
+
+    footer .navigation-list {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+        text-align: left;
+    }
+}
